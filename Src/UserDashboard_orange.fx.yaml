@@ -1,0 +1,171 @@
+UserDashboard_orange As screen:
+    BackgroundImage: =appbackgroud_1
+    Fill: =RGBA(0, 0, 0, 1)
+    ImagePosition: =ImagePosition.Tile
+    OnVisible: =
+
+    Button4_2 As button:
+        DisabledBorderColor: =RGBA(255, 255, 0, 1)
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =384
+        HoverFill: =RGBA(104, 43, 183, 1)
+        PressedFill: =RGBA(104, 43, 183, 1)
+        RadiusBottomLeft: =100
+        RadiusBottomRight: =100
+        Size: =24
+        Text: =""
+        Width: =640
+        ZIndex: =1
+
+    Button3_9 As button:
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =160
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        OnSelect: |-
+            =Launch("https://www.google.com/maps/search/?api=1&query=hospitals+near+me")
+        RadiusBottomLeft: =11
+        RadiusBottomRight: =11
+        RadiusTopLeft: =11
+        RadiusTopRight: =11
+        Size: =24
+        Text: =""
+        X: =82
+        Y: =752
+        ZIndex: =2
+
+    Button3_10 As button:
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =160
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        OnSelect: =Navigate(Settings_orange,ScreenTransition.CoverRight)
+        RadiusBottomLeft: =11
+        RadiusBottomRight: =11
+        RadiusTopLeft: =11
+        RadiusTopRight: =11
+        Size: =24
+        Text: =""
+        X: =401
+        Y: =752
+        ZIndex: =3
+
+    Button3_6 As button:
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =160
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        OnSelect: =Navigate(QRcode_orange,ScreenTransition.CoverRight)
+        RadiusBottomLeft: =11
+        RadiusBottomRight: =11
+        RadiusTopLeft: =11
+        RadiusTopRight: =11
+        Size: =24
+        Text: =""
+        X: =401
+        Y: =516
+        ZIndex: =4
+
+    Button3_2 As button:
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =160
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        OnSelect: =Navigate(PasswordauthenticationEdit_orange_1,ScreenTransition.CoverRight) 
+        RadiusBottomLeft: =11
+        RadiusBottomRight: =11
+        RadiusTopLeft: =11
+        RadiusTopRight: =11
+        Size: =24
+        Text: =""
+        X: =82
+        Y: =516
+        ZIndex: =5
+
+    Label3_2 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =378
+        Size: =55
+        Text: =Concatenate("Welcome ",username.Text)
+        VerticalAlign: =VerticalAlign.Top
+        Width: =365
+        X: =24
+        Y: =26
+        ZIndex: =6
+
+    Icon2_24 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Leave
+        OnSelect: =Navigate(PrimaryScreen,ScreenTransition.CoverRight) && Notify("You have been Logged Out",Warning,4000)
+        X: =574
+        Y: =48
+        ZIndex: =7
+
+    Icon2_27 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.EmojiSmile
+        OnSelect: |
+            =Navigate(Rating_Orange,ScreenTransition.CoverRight) 
+        X: =449
+        Y: =48
+        ZIndex: =8
+
+    Icon2_25 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.View
+        OnSelect: =Navigate(QRcode_orange,ScreenTransition.CoverRight)
+        X: =449
+        Y: =560
+        ZIndex: =9
+
+    Image1_2 As image:
+        Height: =229
+        Image: ='108779078_3117297568362286_7035059729555999876_n'
+        RadiusBottomLeft: =Image1_2.Height
+        RadiusBottomRight: =Image1_2.Height
+        RadiusTopLeft: =Image1_2.Height
+        RadiusTopRight: =Image1_2.Height
+        Width: =229
+        X: =389
+        Y: =137
+        ZIndex: =10
+
+    Icon2_28 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Settings
+        OnSelect: |
+            =Navigate(Settings_orange,ScreenTransition.CoverRight)
+        X: =449
+        Y: =800
+        ZIndex: =11
+
+    Icon2_26 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =55
+        Icon: =Icon.Health
+        OnSelect: =Navigate(PasswordauthenticationEdit_orange_1,ScreenTransition.CoverRight) 
+        X: =130
+        Y: =569
+        ZIndex: =13
+
+    Button4_3 As button:
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =32
+        HoverFill: =RGBA(0,0,0,0)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =24
+        Text: =""
+        Width: =640
+        Y: =1103
+        ZIndex: =14
+
+    Icon2_36 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Hospital
+        OnSelect: |-
+            =Launch("https://www.google.com/maps/search/?api=1&query=hospitals+near+me")
+        X: =130
+        Y: =800
+        ZIndex: =15
+

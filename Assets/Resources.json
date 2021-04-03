@@ -1,0 +1,148 @@
+{
+  "Resources": [
+    {
+      "Content": "Image",
+      "FileName": "/ctrllib/image/images/SampleImage.svg",
+      "IsSampleData": true,
+      "IsWritable": false,
+      "Name": "SampleImage",
+      "Path": "/ctrllib/image/images/SampleImage.svg",
+      "ResourceKind": "Uri",
+      "RootPath": "ms-appx:///ctrllib/image/images/SampleImage.svg",
+      "Schema": "i",
+      "Type": "ResourceInfo"
+    },
+    {
+      "Content": "Image",
+      "FileName": "0001.jpg",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Name": "Screenshot 2021-04-01 213921",
+      "Path": "Assets\\Images\\0001.jpg",
+      "ResourceKind": "LocalFile",
+      "Schema": "i",
+      "Type": "ResourceInfo"
+    },
+    {
+      "Content": "Image",
+      "FileName": "0002.jpg",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Name": "Screenshot 2021-04-01 214120",
+      "Path": "Assets\\Images\\0002.jpg",
+      "ResourceKind": "LocalFile",
+      "Schema": "i",
+      "Type": "ResourceInfo"
+    },
+    {
+      "Content": "Image",
+      "FileName": "0003.jpg",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Name": "Screenshot 2021-04-01 213748",
+      "Path": "Assets\\Images\\0003.jpg",
+      "ResourceKind": "LocalFile",
+      "Schema": "i",
+      "Type": "ResourceInfo"
+    },
+    {
+      "Content": "Image",
+      "FileName": "0004.jpg",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Name": "108779078_3117297568362286_7035059729555999876_n",
+      "Path": "Assets\\Images\\0004.jpg",
+      "ResourceKind": "LocalFile",
+      "Schema": "i",
+      "Type": "ResourceInfo"
+    },
+    {
+      "Content": "Image",
+      "FileName": "0005.jpg",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Name": "Rf61a8129a78f79c559a2483ffa746c43",
+      "Path": "Assets\\Images\\0005.jpg",
+      "ResourceKind": "LocalFile",
+      "Schema": "i",
+      "Type": "ResourceInfo"
+    },
+    {
+      "Content": "Image",
+      "FileName": "0006.png",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Name": "808080.png",
+      "Path": "Assets\\Images\\0006.png",
+      "ResourceKind": "LocalFile",
+      "Schema": "i",
+      "Type": "ResourceInfo"
+    },
+    {
+      "Content": "Image",
+      "FileName": "0007.png",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Name": "Screenshot_2021-04-01_at_11.06.45_PM-removebg-preview (1)",
+      "Path": "Assets\\Images\\0007.png",
+      "ResourceKind": "LocalFile",
+      "Schema": "i",
+      "Type": "ResourceInfo"
+    },
+    {
+      "Content": "Image",
+      "FileName": "0008.png",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Name": "qrcode",
+      "Path": "Assets\\Images\\0008.png",
+      "ResourceKind": "LocalFile",
+      "Schema": "i",
+      "Type": "ResourceInfo"
+    },
+    {
+      "Content": "Image",
+      "FileName": "0011.png",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Name": "appbackgroud",
+      "Path": "Assets\\Images\\0011.png",
+      "ResourceKind": "LocalFile",
+      "Schema": "i",
+      "Type": "ResourceInfo"
+    },
+    {
+      "Content": "Image",
+      "FileName": "0010.png",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Name": "Logo",
+      "Path": "Assets\\Images\\0010.png",
+      "ResourceKind": "LocalFile",
+      "Schema": "i",
+      "Type": "ResourceInfo"
+    },
+    {
+      "Content": "Image",
+      "FileName": "0012.png",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Name": "appbackgroud_1",
+      "Path": "Assets\\Images\\0012.png",
+      "ResourceKind": "LocalFile",
+      "Schema": "i",
+      "Type": "ResourceInfo"
+    },
+    {
+      "Content": "Image",
+      "FileName": "0013.png",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Name": "Logo_small",
+      "Path": "Assets\\Images\\0013.png",
+      "ResourceKind": "LocalFile",
+      "Schema": "i",
+      "Type": "ResourceInfo"
+    }
+  ]
+}

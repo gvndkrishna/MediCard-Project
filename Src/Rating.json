@@ -1,0 +1,8 @@
+{
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/rating",
+  "IsComponentTemplate": false,
+  "LastModifiedTimestamp": "0",
+  "Name": "Rating",
+  "Version": "2.0.0"
+}

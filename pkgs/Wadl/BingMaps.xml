@@ -1,0 +1,326 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://india-001.azure-apim.net/apim/bingmaps" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="BingMaps" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Bing Maps">Bing Maps</doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://india-001.azure-apim.net/apim/bingmaps" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <string name="GetRoute_Response_distanceUnit_def" />
+      <string name="GetRoute_Response_durationUnit_def" />
+      <number name="GetRoute_Response_routeLegs_def_actualEnd_def_coordinates_def_latitude_def" />
+      <number name="GetRoute_Response_routeLegs_def_actualEnd_def_coordinates_def_longitude_def" />
+      <string name="GetRoute_Response_routeLegs_def_actualEnd_def_coordinates_def_combined_def" />
+      <object name="GetRoute_Response_routeLegs_def_actualEnd_def_coordinates_def">
+        <property name="latitude" type="number" />
+        <property name="longitude" type="number" />
+        <property name="combined" type="string" />
+      </object>
+      <string name="GetRoute_Response_routeLegs_def_actualEnd_def_type_def" />
+      <object name="GetRoute_Response_routeLegs_def_actualEnd_def">
+        <property name="coordinates" typeRef="GetRoute_Response_routeLegs_def_actualEnd_def_coordinates_def" />
+        <property name="type" type="string" />
+      </object>
+      <number name="GetRoute_Response_routeLegs_def_actualStart_def_coordinates_def_latitude_def" />
+      <number name="GetRoute_Response_routeLegs_def_actualStart_def_coordinates_def_longitude_def" />
+      <string name="GetRoute_Response_routeLegs_def_actualStart_def_coordinates_def_combined_def" />
+      <object name="GetRoute_Response_routeLegs_def_actualStart_def_coordinates_def">
+        <property name="latitude" type="number" />
+        <property name="longitude" type="number" />
+        <property name="combined" type="string" />
+      </object>
+      <string name="GetRoute_Response_routeLegs_def_actualStart_def_type_def" />
+      <object name="GetRoute_Response_routeLegs_def_actualStart_def">
+        <property name="coordinates" typeRef="GetRoute_Response_routeLegs_def_actualStart_def_coordinates_def" />
+        <property name="type" type="string" />
+      </object>
+      <string name="GetRoute_Response_routeLegs_def_description_def" />
+      <string name="GetRoute_Response_routeLegs_def_endLocation_def_address_def_countryRegion_def" />
+      <string name="GetRoute_Response_routeLegs_def_endLocation_def_address_def_formattedAddress_def" />
+      <object name="GetRoute_Response_routeLegs_def_endLocation_def_address_def">
+        <property name="countryRegion" type="string" />
+        <property name="formattedAddress" type="string" />
+      </object>
+      <string name="GetRoute_Response_routeLegs_def_endLocation_def_confidence_def" />
+      <string name="GetRoute_Response_routeLegs_def_endLocation_def_entityType_def" />
+      <string name="GetRoute_Response_routeLegs_def_endLocation_def_name_def" />
+      <object name="GetRoute_Response_routeLegs_def_endLocation_def">
+        <property name="address" typeRef="GetRoute_Response_routeLegs_def_endLocation_def_address_def" />
+        <property name="confidence" type="string" />
+        <property name="entityType" type="string" />
+        <property name="name" type="string" />
+      </object>
+      <string name="GetRoute_Response_routeLegs_def_routeRegion_def" />
+      <string name="GetRoute_Response_routeLegs_def_startLocation_def_address_def_countryRegion_def" />
+      <string name="GetRoute_Response_routeLegs_def_startLocation_def_address_def_formattedAddress_def" />
+      <object name="GetRoute_Response_routeLegs_def_startLocation_def_address_def">
+        <property name="countryRegion" type="string" />
+        <property name="formattedAddress" type="string" />
+      </object>
+      <string name="GetRoute_Response_routeLegs_def_startLocation_def_confidence_def" />
+      <string name="GetRoute_Response_routeLegs_def_startLocation_def_entityType_def" />
+      <string name="GetRoute_Response_routeLegs_def_startLocation_def_name_def" />
+      <object name="GetRoute_Response_routeLegs_def_startLocation_def">
+        <property name="address" typeRef="GetRoute_Response_routeLegs_def_startLocation_def_address_def" />
+        <property name="confidence" type="string" />
+        <property name="entityType" type="string" />
+        <property name="name" type="string" />
+      </object>
+      <object name="GetRoute_Response_routeLegs_def">
+        <property name="actualEnd" typeRef="GetRoute_Response_routeLegs_def_actualEnd_def" />
+        <property name="actualStart" typeRef="GetRoute_Response_routeLegs_def_actualStart_def" />
+        <property name="description" type="string" />
+        <property name="endLocation" typeRef="GetRoute_Response_routeLegs_def_endLocation_def" />
+        <property name="routeRegion" type="string" />
+        <property name="startLocation" typeRef="GetRoute_Response_routeLegs_def_startLocation_def" />
+      </object>
+      <string name="GetRoute_Response_trafficCongestion_def" />
+      <string name="GetRoute_Response_trafficDataUsed_def" />
+      <number name="GetRoute_Response_travelDistance_def" />
+      <integer name="GetRoute_Response_travelDuration_def" />
+      <integer name="GetRoute_Response_travelDurationTraffic_def" />
+      <object name="GetRoute_Response">
+        <property name="distanceUnit" type="string" />
+        <property name="durationUnit" type="string" />
+        <property name="routeLegs" typeRef="GetRoute_Response_routeLegs_def" />
+        <property name="trafficCongestion" type="string" />
+        <property name="trafficDataUsed" type="string" />
+        <property name="travelDistance" type="number" />
+        <property name="travelDuration" type="integer" />
+        <property name="travelDurationTraffic" type="integer" />
+      </object>
+      <string name="GetLocation_Response_address_def_addressLine_def" />
+      <string name="GetLocation_Response_address_def_countryRegion_def" />
+      <string name="GetLocation_Response_address_def_countryRegionIso2_def" />
+      <string name="GetLocation_Response_address_def_formattedAddress_def" />
+      <string name="GetLocation_Response_address_def_postalCode_def" />
+      <object name="GetLocation_Response_address_def">
+        <property name="addressLine" type="string" />
+        <property name="countryRegion" type="string" />
+        <property name="countryRegionIso2" type="string" />
+        <property name="formattedAddress" type="string" />
+        <property name="postalCode" type="string" />
+      </object>
+      <string name="GetLocation_Response_confidence_def" />
+      <string name="GetLocation_Response_entityType_def" />
+      <string name="GetLocation_Response_name_def" />
+      <number name="GetLocation_Response_point_def_coordinates_def_latitude_def" />
+      <number name="GetLocation_Response_point_def_coordinates_def_longitude_def" />
+      <string name="GetLocation_Response_point_def_coordinates_def_combined_def" />
+      <object name="GetLocation_Response_point_def_coordinates_def">
+        <property name="latitude" type="number" />
+        <property name="longitude" type="number" />
+        <property name="combined" type="string" />
+      </object>
+      <string name="GetLocation_Response_point_def_type_def" />
+      <object name="GetLocation_Response_point_def">
+        <property name="coordinates" typeRef="GetLocation_Response_point_def_coordinates_def" />
+        <property name="type" type="string" />
+      </object>
+      <object name="GetLocation_Response">
+        <property name="address" typeRef="GetLocation_Response_address_def" />
+        <property name="confidence" type="string" />
+        <property name="entityType" type="string" />
+        <property name="name" type="string" />
+        <property name="point" typeRef="GetLocation_Response_point_def" />
+      </object>
+      <string name="GetMap_Response" />
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://india-001.azure-apim.net/apim/bingmaps">
+    <resource path="/{connectionId}/REST/V1/Routes/Driving">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="GetRoute" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Get route&#xA;Calculate a route using waypoints." />
+        <request>
+          <param style="query" name="wp.0" type="xs:string" required="true">
+            <doc title="Specified as a point, landmark, or address. (47.610,-122.107 or Seattle, WA)" />
+          </param>
+          <param style="query" name="wp.1" type="xs:string" required="true">
+            <doc title="Specified as a point, landmark, or address. (47.610,-122.107 or Seattle, WA)" />
+          </param>
+          <param style="query" name="avoid" type="xs:string">
+            <doc title="A comma-separated list of values from the following list (highways, tolls, minimizeHighways, minimizeTolls)." />
+          </param>
+          <param style="query" name="optimize" type="xs:string">
+            <doc title="Specifies what parameters to use to optimize the route." />
+            <option value="distance" />
+            <option value="time " />
+            <option value="timeWithTraffic" />
+            <option value="timeAvoidClosure" />
+          </param>
+          <param style="query" name="distanceUnit" type="xs:string">
+            <doc title="The units to use for distance in the response. Default: Kilometer" />
+            <option value="Mile" />
+            <option value="Kilometer" />
+          </param>
+          <param style="query" name="travelMode" type="xs:string">
+            <doc title="The mode of travel for the route. Default: Driving" />
+            <option value="Driving" />
+            <option value="Walking" />
+            <option value="Transit" />
+          </param>
+          <param style="query" name="dateTime" type="xs:string">
+            <doc title="Required when the travel mode is transit. Identifies the desired transit time, such as arrival time or departure time." />
+          </param>
+          <param style="query" name="timeType" type="xs:string">
+            <doc title="Required when the travel mode is transit. Specifies how to interpret the transit date-time value." />
+            <option value="Arrival" />
+            <option value="Departure" />
+            <option value="LastAvailable" />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:GetRoute_Response" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/REST/v1/Locations/pointPlaceHolder">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="GetLocationByPoint" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Get location by point&#xA;Get the location information associated with latitude and longitude coordinates." />
+        <request>
+          <param style="query" name="latitude" type="xs:double" required="true">
+            <doc title="The latitude coordinate you want to reverse geocode. Example: 47.64054" />
+          </param>
+          <param style="query" name="longitude" type="xs:double" required="true">
+            <doc title="The longitude coordinate you want to reverse geocode. Example: -122.12934" />
+          </param>
+          <param style="query" name="includeEntityTypes" type="xs:string">
+            <doc title="The entity types that you want to return in the response." />
+          </param>
+          <param style="query" name="includeNeighborhood" type="xs:boolean" default="true">
+            <doc title="A value determining whether or not to include the neighborhood in the response when it is available. 0 or 1" />
+          </param>
+          <param style="query" name="include" type="xs:boolean" default="true">
+            <doc title="A value determining whether or not to include the two-letter ISO country code. ciso2" />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:GetLocation_Response" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/REST/v1/Locations">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="GetLocationByAddress" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Get location by address&#xA;Get the location information associated with an address. If no location is found, an empty result will be returned." />
+        <request>
+          <param style="query" name="addressLine" type="xs:string">
+            <doc title="A string specifying the street line of an address (not including city, country region, etc)." />
+          </param>
+          <param style="query" name="locality" type="xs:string">
+            <doc title="A string that contains the locality, such as a US city." />
+          </param>
+          <param style="query" name="adminDistrict" type="xs:string">
+            <doc title="A string that contains a subdivision, such as the abbreviation of a US state." />
+          </param>
+          <param style="query" name="postalCode" type="xs:string">
+            <doc title="A string that contains the postal code, such as a US ZIP Code." />
+          </param>
+          <param style="query" name="countryRegion" type="xs:string">
+            <doc title="A string specifying the ISO country code." />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:GetLocation_Response" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/REST/v1/Imagery/Map/{imagerySet}/pointPlaceHolder/{zoomLevel}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="imagerySet" type="xs:string" required="true">
+        <doc title="The type of imagery." />
+        <option value="Aerial" />
+        <option value="AerialWithLabels" />
+        <option value="CanvasDark" />
+        <option value="CanvasLight" />
+        <option value="CanvasGray" />
+        <option value="Road" />
+      </param>
+      <param style="template" name="zoomLevel" type="xs:string" required="true" default="10">
+        <doc title="The level of zoom to display between 0 and 21. Default 10" />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetMap" visibility="advanced" siena:isDeprecated="true" siena:family="GetMap" siena:revision="1" siena:status="Preview">
+        <doc title="Get static map&#xA;Get static map." />
+        <request>
+          <param style="query" name="latitude" type="xs:string" required="true">
+            <doc title="The latitude coordinate you want to reverse geocode. Example: 47.64054" />
+          </param>
+          <param style="query" name="longitude" type="xs:string" required="true">
+            <doc title="The longitude coordinate you want to reverse geocode. Example: -122.12934" />
+          </param>
+          <param style="query" name="format" type="xs:string">
+            <doc title="The image format to use for the static map." />
+            <option value="gif" />
+            <option value="jpeg" />
+            <option value="png" />
+          </param>
+          <param style="query" name="mapSize" type="xs:string">
+            <doc title="The width and height in pixels of the static map output. Example: 1000,600." />
+          </param>
+          <param style="query" name="pushpin" type="xs:string">
+            <doc title="Point value (latitude and longitude) with options to add a label of up to three (3) characters and to specify an icon style. Example: 47.610,-122.107;5;P10 (more information https://aka.ms/u8b8aq)." />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/octet-stream" siena:dtype="image" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/V2/REST/v1/Imagery/Map/{imagerySet}/pointPlaceHolder/{zoomLevel}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="imagerySet" type="xs:string" required="true">
+        <doc title="The type of imagery." />
+        <option value="Aerial" />
+        <option value="AerialWithLabels" />
+        <option value="CanvasDark" />
+        <option value="CanvasLight" />
+        <option value="CanvasGray" />
+        <option value="Road" />
+      </param>
+      <param style="template" name="zoomLevel" type="xs:string" required="true" default="10">
+        <doc title="The level of zoom to display between 0 and 21. Default 10" />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetMapV2" visibility="advanced" siena:isDeprecated="false" siena:family="GetMap" siena:revision="2" siena:status="Preview">
+        <doc title="Get static map&#xA;Get static map." />
+        <request>
+          <param style="query" name="latitude" type="xs:double" required="true">
+            <doc title="The latitude coordinate you want to reverse geocode. Example: 47.64054" />
+          </param>
+          <param style="query" name="longitude" type="xs:double" required="true">
+            <doc title="The longitude coordinate you want to reverse geocode. Example: -122.12934" />
+          </param>
+          <param style="query" name="format" type="xs:string">
+            <doc title="The image format to use for the static map." />
+            <option value="gif" />
+            <option value="jpeg" />
+            <option value="png" />
+          </param>
+          <param style="query" name="mapSize" type="xs:string">
+            <doc title="The width and height in pixels of the static map output. Example: 1000,600." />
+          </param>
+          <param style="query" name="pushpinLatitude" type="xs:double">
+            <doc title="Specify pushpin latitude (more information https://aka.ms/u8b8aq)." />
+          </param>
+          <param style="query" name="pushpinLongitude" type="xs:double">
+            <doc title="Specify pushpin longitude (more information https://aka.ms/u8b8aq)." />
+          </param>
+          <param style="query" name="pushpinIconStyle" type="xs:long">
+            <doc title="Specify pushpin icon style (more information https://aka.ms/u8b8aq)." />
+          </param>
+          <param style="query" name="pushpinLabel" type="xs:string">
+            <doc title="Specify a label of up to three (3) characters (more information https://aka.ms/u8b8aq)." />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/octet-stream" siena:dtype="image" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_bingmaps" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>

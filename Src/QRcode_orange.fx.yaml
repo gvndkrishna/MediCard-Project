@@ -1,0 +1,37 @@
+QRcode_orange As screen:
+    BackgroundImage: =appbackgroud_1
+    Fill: =RGBA(0, 0, 0, 1)
+    ImagePosition: =ImagePosition.Tile
+
+    Sign_Up_10 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =97
+        Size: =45
+        Text: ="Your QR Code"
+        Width: =560
+        X: =58
+        Y: =9
+        ZIndex: =1
+
+    HtmlText1_1 As htmlViewer:
+        Color: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.View
+        Height: =628
+        HtmlText: |-
+            ="<img src = https://api.qrserver.com/v1/create-qr-code/?size=600x600&data=https://lpuin-my.sharepoint.com/:x:/g/personal/lal_11905974_lpu_in/EawJsrRjktZEsqFMaqa4l30B_fiv-7RJYjSaJ9Zwov3YZQ?e=lrVd0m>"
+        Width: =614
+        X: =16
+        Y: =305
+        ZIndex: =2
+
+    Icon2_37 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(UserDashboard_orange,ScreenTransition.UnCover)
+        X: =30
+        Y: =26
+        ZIndex: =3
+

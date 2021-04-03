@@ -1,0 +1,84 @@
+Mypatients As screen:
+    BackgroundImage: =appbackgroud_1
+    Fill: =RGBA(0, 0, 0, 1)
+    ImagePosition: =ImagePosition.Tile
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Items: =mycollection
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        Y: =156
+        ZIndex: =1
+
+        Image7 As image:
+            Height: =128
+            Image: =qrcode
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title5 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Info
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image7.Width - 104
+            X: =Image7.X + Image7.Width + 24
+            Y: =44
+            ZIndex: =2
+
+        Subtitle4 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.When
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5.Width
+            X: =Title5.X
+            Y: =Title5.Y + Title5.Height + 4
+            ZIndex: =3
+
+        NextArrow5 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Launch(BarcodeScanner2.Value)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator5 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+    Icon2_42 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(DocDashboard,ScreenTransition.CoverRight)
+        X: =28
+        Y: =22
+        ZIndex: =2
+

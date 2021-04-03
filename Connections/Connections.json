@@ -1,0 +1,93 @@
+{
+  "3a79f03b-7a68-48c0-af73-15efe7e36d84": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_excel/connections/ac73ac10cbb34b34b514dcf39d9e4693",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1440/1.0.1440.2331/excel/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excel",
+      "parameterHints": {
+        "8cb8a648-c4f0-4ca0-a71f-3506d4da508c": {
+          "value": "fileSource"
+        }
+      }
+    },
+    "datasets": {
+      "b!IvfN1hjrHU6Wv7AjSnVoJoRdpU_PJ3VNvQ9jXgq3mSZ5hMvnHBPUTJIsTotJaiZq.01MC2GDL2OFPR5GYDW2FCJVH3R3DVUXMUX": {
+        "dataSources": {
+          "Table1": {
+            "tableName": "Table1"
+          }
+        }
+      },
+      "b!IvfN1hjrHU6Wv7AjSnVoJoRdpU_PJ3VNvQ9jXgq3mSZ5hMvnHBPUTJIsTotJaiZq.01MC2GDL4O5T7RMIA4JFAZ56IBIZLNN6KX": {
+        "dataSources": {
+          "Table2": {
+            "tableName": "Table2"
+          }
+        }
+      },
+      "b!IvfN1hjrHU6Wv7AjSnVoJoRdpU_PJ3VNvQ9jXgq3mSZ5hMvnHBPUTJIsTotJaiZq.01MC2GDL5MBGZLIY4S2ZCLFIKMNKTLRF35": {
+        "dataSources": {
+          "Table1_1": {
+            "tableName": "Table1"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Table1",
+      "Table1_1",
+      "Table2"
+    ],
+    "dependencies": {
+      "fileSource": "8cb8a648-c4f0-4ca0-a71f-3506d4da508c"
+    },
+    "dependents": [],
+    "id": "3a79f03b-7a68-48c0-af73-15efe7e36d84"
+  },
+  "8cb8a648-c4f0-4ca0-a71f-3506d4da508c": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/53b7b1acc57147dd89fd2df34217dc2f",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1439/1.0.1439.2325/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
+      "parameterHints": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "3a79f03b-7a68-48c0-af73-15efe7e36d84"
+    ],
+    "id": "8cb8a648-c4f0-4ca0-a71f-3506d4da508c"
+  },
+  "d1ccbff5-6f1c-4e9d-96e4-0c5778311879": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_bingmaps/connections/727ae097063c47d0aac1e24b0ed00f2f",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Bing Maps",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1371/1.0.1371.2074/bingmaps/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_bingmaps",
+      "parameterHints": {},
+      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_bingmaps/connections/727ae097063c47d0aac1e24b0ed00f2f"
+    },
+    "datasets": {},
+    "dataSources": [
+      "BingMaps"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "d1ccbff5-6f1c-4e9d-96e4-0c5778311879"
+  }
+}

@@ -1,0 +1,69 @@
+Settings As screen:
+    BackgroundImage: =appbackgroud_1
+    Fill: =RGBA(255, 255, 255, 1)
+    ImagePosition: =ImagePosition.Tile
+    OnVisible: =Reset(Dropdown2)
+
+    Dropdown2 As dropdown:
+        ChevronBackground: =RGBA(109, 49, 162, 1)
+        Default: ="Voilet"
+        Height: =62
+        Items: |-
+            =Table({ Text: "Voilet" }, { Text: "Orange" })
+        OnChange: =Navigate(Settings_orange)
+        Reset: =true
+        Size: =21
+        Width: =326
+        X: =40
+        Y: =225
+        ZIndex: =1
+
+    Icon2_38 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(UserDashboard,ScreenTransition.UnCover)
+        X: =28
+        Y: =46
+        ZIndex: =2
+
+    Label10_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        Height: =66
+        Size: =35
+        Text: ="Theme"
+        Width: =272
+        X: =40
+        Y: =133
+        ZIndex: =3
+
+    Button6 As button:
+        Align: =Align.Left
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Lato Black'
+        Height: =55
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        OnSelect: =Navigate(PasswordauthenticationEdit)
+        PressedFill: =RGBA(0,0,0,0)
+        Size: =35
+        Text: ="Edit MediData"
+        Width: =326
+        X: =40
+        Y: =365
+        ZIndex: =5
+
+    Button6_1 As button:
+        Align: =Align.Left
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Lato Black'
+        Height: =55
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        OnSelect: =Navigate(PrimaryScreen,ScreenTransition.CoverRight) && Notify("You have been Logged Out",Warning,4000)
+        PressedFill: =RGBA(0,0,0,0)
+        Size: =35
+        Text: ="LogOut"
+        Width: =326
+        X: =40
+        Y: =499
+        ZIndex: =6
+

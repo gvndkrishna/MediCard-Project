@@ -1,0 +1,108 @@
+Rating_Orange As screen:
+    BackgroundImage: =appbackgroud_1
+    Fill: =RGBA(0, 0, 0, 1)
+    ImagePosition: =ImagePosition.Tile
+
+    Icon2_32 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(UserDashboard_orange,ScreenTransition.UnCover)
+        X: =28
+        Y: =22
+        ZIndex: =2
+
+    Sign_Up_7 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =180
+        Size: =35
+        Text: ="Rate your experience here"
+        Width: =560
+        X: =42
+        Y: =150
+        ZIndex: =3
+
+    Rating1_6 As rating:
+        Default: =0
+        DisabledFill: =Self.Fill
+        DisplayMode: =DisplayMode.Edit
+        FocusedBorderColor: =Self.BorderColor
+        Height: =77
+        HoverFill: =Self.Fill
+        PressedFill: =Self.Fill
+        RatingFill: =RGBA(255, 191, 0, 1)
+        TabIndex: =0
+        Tooltip: =""
+        Width: =350
+        X: =42
+        Y: =409
+        ZIndex: =4
+
+    Icon2_33 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Reload
+        OnSelect: =Reset(Rating1_6) && Reset(Rating1_7) && Reset(Rating1_8)
+        X: =550
+        Y: =22
+        ZIndex: =5
+
+    Label4_6 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =70
+        Size: =29
+        Text: ="Overall Rating"
+        Width: =560
+        X: =28
+        Y: =339
+        ZIndex: =6
+
+    Rating1_7 As rating:
+        Default: =0
+        DisabledFill: =Self.Fill
+        DisplayMode: =DisplayMode.Edit
+        FocusedBorderColor: =Self.BorderColor
+        Height: =77
+        HoverFill: =Self.Fill
+        PressedFill: =Self.Fill
+        RatingFill: =RGBA(255, 191, 0, 1)
+        Width: =350
+        X: =56
+        Y: =586
+        ZIndex: =7
+
+    Label4_7 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =70
+        Size: =29
+        Text: ="UI Rating"
+        Width: =560
+        X: =42
+        Y: =516
+        ZIndex: =8
+
+    Rating1_8 As rating:
+        Default: =0
+        DisabledFill: =Self.Fill
+        DisplayMode: =DisplayMode.Edit
+        FocusedBorderColor: =Self.BorderColor
+        Height: =77
+        HoverFill: =Self.Fill
+        PressedFill: =Self.Fill
+        RatingFill: =RGBA(255, 191, 0, 1)
+        Width: =350
+        X: =56
+        Y: =759
+        ZIndex: =9
+
+    Label4_8 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =70
+        Size: =29
+        Text: ="User Experience Rating"
+        Width: =560
+        X: =42
+        Y: =689
+        ZIndex: =10
+

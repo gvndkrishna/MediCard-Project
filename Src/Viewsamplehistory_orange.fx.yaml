@@ -1,0 +1,522 @@
+Viewsamplehistory_orange As screen:
+    BackgroundImage: =appbackgroud_1
+    Fill: =RGBA(0, 0, 0, 1)
+    ImagePosition: =ImagePosition.Tile
+
+    FormViewer1_1 As formViewer:
+        DataSource: =Table1_1
+        Height: =1026
+        Item: =Last(Table1_1)
+        Width: =640
+        Y: =110
+        ZIndex: =1
+
+        "'Full Name_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Full_x0020_Name"
+            Default: =ThisItem.'Full Name'
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Full Name"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey3_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                PaddingBottom: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue3_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 191, 0, 1)
+                DisplayMode: =Parent.DisplayMode
+                FontWeight: =FontWeight.Bold
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =30
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey3_1.Y + DataCardKey3_1.Height + 5
+                ZIndex: =2
+
+        Age_DataCard1_1 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Age"
+            Default: =ThisItem.Age
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Age"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =116
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey4_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                PaddingBottom: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue4_1 As label:
+                Color: =RGBA(255, 191, 0, 1)
+                DisplayMode: =Parent.DisplayMode
+                Height: =46
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey4_1.Y + DataCardKey4_1.Height + 5
+                ZIndex: =2
+
+        Gender_DataCard1_1 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Gender"
+            Default: =ThisItem.Gender
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Gender"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey5_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                PaddingBottom: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue5_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 191, 0, 1)
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey5_1.Y + DataCardKey5_1.Height + 5
+                ZIndex: =2
+
+        Contact_DataCard1_1 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Contact"
+            Default: =ThisItem.Contact
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Contact"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey6_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                PaddingBottom: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue6_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 191, 0, 1)
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey6_1.Y + DataCardKey6_1.Height + 5
+                ZIndex: =2
+
+        "'Emergency Contact_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Emergency_x0020_Contact"
+            Default: =ThisItem.'Emergency Contact'
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Emergency Contact"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey7_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                PaddingBottom: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue7_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 191, 0, 1)
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey7_1.Y + DataCardKey7_1.Height + 5
+                ZIndex: =2
+
+        "'Insurance Number_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Insurance_x0020_Number"
+            Default: =ThisItem.'Insurance Number'
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Insurance Number"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey8_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                PaddingBottom: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue8_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 191, 0, 1)
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey8_1.Y + DataCardKey8_1.Height + 5
+                ZIndex: =2
+
+        DataCard3_1 As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =85
+            Width: =640
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            Label6_1 As label:
+                Color: =RGBA(255, 191, 0, 1)
+                DisplayMode: =DisplayMode.View
+                Size: =25
+                Text: =TextInput1
+                Width: =560
+                X: =24
+                Y: =60
+                ZIndex: =1
+
+            Label7_1 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =50
+                Size: =21
+                Text: =Label5
+                Width: =560
+                X: =24
+                Y: =10
+                ZIndex: =2
+
+        "'Current Medications _DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Current_x0020_Medications_x0020_"
+            Default: =ThisItem.'Current Medications '
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Current Medications "
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =7
+            ZIndex: =1
+
+            DataCardKey9_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                PaddingBottom: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue9_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 191, 0, 1)
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey9_1.Y + DataCardKey9_1.Height + 5
+                ZIndex: =2
+
+        "'Known Allergies_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Known_x0020_Allergies"
+            Default: =ThisItem.'Known Allergies'
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Known Allergies"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =78
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =8
+            ZIndex: =1
+
+            DataCardKey10_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                PaddingBottom: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue10_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 191, 0, 1)
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey10_1.Y + DataCardKey10_1.Height + 5
+                ZIndex: =2
+
+        "'Past illnesses _DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Past_x0020_illnesses_x0020_"
+            Default: =ThisItem.'Past illnesses '
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Past illnesses "
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =9
+            ZIndex: =1
+
+            DataCardKey11_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                PaddingBottom: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue11_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 191, 0, 1)
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey11_1.Y + DataCardKey11_1.Height + 5
+                ZIndex: =2
+
+        "'Vaccines taken_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Vaccines_x0020_taken"
+            Default: =ThisItem.'Vaccines taken'
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Vaccines taken"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =10
+            ZIndex: =1
+
+            DataCardKey13_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                PaddingBottom: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue13_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 191, 0, 1)
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey13_1.Y + DataCardKey13_1.Height + 5
+                ZIndex: =2
+
+        "'Past Surgeries_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Past_x0020_Surgeries"
+            Default: =ThisItem.'Past Surgeries'
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Past Surgeries"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =11
+            ZIndex: =1
+
+            DataCardKey12_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                PaddingBottom: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue12_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 191, 0, 1)
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey12_1.Y + DataCardKey12_1.Height + 5
+                ZIndex: =2
+
+    Icon2_29 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(UserDashboard_orange,ScreenTransition.UnCover)
+        X: =28
+        Y: =22
+        ZIndex: =2
+
+    Icon2_31 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =47
+        Icon: =Icon.Edit
+        OnSelect: |
+            =Navigate(PasswordauthenticationEdit_orange,ScreenTransition.UnCover) 
+        Width: =55
+        X: =548
+        Y: =30
+        ZIndex: =3
+
+    Icon2_30 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.View
+        OnSelect: =Navigate(QRcode,ScreenTransition.CoverRight)
+        X: =404
+        Y: =22
+        ZIndex: =4
+

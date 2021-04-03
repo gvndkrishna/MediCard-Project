@@ -1,0 +1,30 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2021-02-16T17:40:18.5490000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "Age": "Age",
+      "Contact": "Contact",
+      "Current_x0020_Medications_x0020_": "Current Medications ",
+      "Emergency_x0020_Contact": "Emergency Contact",
+      "Full_x0020_Name": "Full Name",
+      "Gender": "Gender",
+      "Insurance_x0020_Number": "Insurance Number",
+      "Known_x0020_Allergies": "Known Allergies",
+      "Past_x0020_illnesses_x0020_": "Past illnesses ",
+      "Past_x0020_Surgeries": "Past Surgeries",
+      "Vaccines_x0020_taken": "Vaccines taken"
+    },
+    "DatasetName": "b!IvfN1hjrHU6Wv7AjSnVoJoRdpU_PJ3VNvQ9jXgq3mSZ5hMvnHBPUTJIsTotJaiZq.01MC2GDL5MBGZLIY4S2ZCLFIKMNKTLRF35",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Table1_1",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

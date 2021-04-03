@@ -1,0 +1,126 @@
+SignIn As screen:
+    BackgroundImage: =appbackgroud
+    Fill: =RGBA(0, 0, 0, 1)
+    ImagePosition: =ImagePosition.Tile
+    OnVisible: =Reset(Password) && Reset(username) && Reset(Dropdown1)
+
+    Label1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =97
+        Size: =45
+        Text: ="Sign In"
+        Width: =560
+        X: =40
+        Y: =178
+        ZIndex: =1
+
+    username As text:
+        Default: =""
+        FontWeight: =FontWeight.Lighter
+        Height: =70
+        HintText: ="username"
+        Reset: =true
+        Size: =21
+        Width: =560
+        X: =46
+        Y: =379
+        ZIndex: =2
+
+    Password As text:
+        Default: =""
+        FontWeight: =FontWeight.Lighter
+        Height: =70
+        HintText: ="Password"
+        Mode: =TextMode.Password
+        Reset: =true
+        Size: =21
+        Width: =560
+        X: =46
+        Y: =490
+        ZIndex: =3
+
+    Button1 As button:
+        BorderThickness: =3
+        Fill: =RGBA(109, 49, 162, 1)
+        Height: =70
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        OnSelect: =If(username.Text in Table1.username && Password.Text in Table1.password, Navigate(UserDashboard,ScreenTransition.Cover),Notify( "Wrong Username or Password ", NotificationType.Error ) )
+        Size: =24
+        Text: ="Sign In"
+        Width: =280
+        X: =186
+        Y: =674
+        ZIndex: =6
+
+    Icon2 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(PrimaryScreen,ScreenTransition.CoverRight)
+        X: =40
+        Y: =40
+        ZIndex: =7
+
+    Button2 As button:
+        Align: =Align.Left
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =33
+        HoverFill: |-
+            =ColorFade(RGBA(0
+            , 0, 0, 1), -20%)
+        OnSelect: =true
+        PressedColor: |
+            =RGBA(128,128,128,1)
+        PressedFill: =RGBA(0,0,0,0)
+        Size: =17
+        Text: ="Forgot Password?"
+        Width: =206
+        X: =40
+        Y: =587
+        ZIndex: =8
+
+    Button2_1 As button:
+        Align: =Align.Right
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =33
+        HoverFill: |-
+            =ColorFade(RGBA(0
+            , 0, 0, 1), -20%)
+        OnSelect: =Navigate(SignUp,ScreenTransition.Fade)
+        PressedColor: |
+            =RGBA(128,128,128,1)
+        PressedFill: =RGBA(0,0,0,0)
+        Size: =17
+        Text: ="No Account? Sign Up"
+        Width: =297
+        X: =308
+        Y: =587
+        ZIndex: =9
+
+    Dropdown1 As dropdown:
+        ChevronBackground: =RGBA(109, 49, 162, 1)
+        ChevronDisabledBackground: =RGBA(109, 49, 162, 1)
+        Default: ="User"
+        Height: =60
+        Items: |-
+            =Table({ Text: "User" }, { Text: "Doctor" })
+        OnChange: =Navigate(DocSignIn,ScreenTransition.Fade)
+        OnSelect: =
+        Reset: =true
+        SelectionFill: =RGBA(0, 0, 0, 1)
+        Size: =21
+        Width: =205
+        X: =420
+        Y: =40
+        ZIndex: =11
+
+    Image3 As image:
+        Height: =97
+        Image: =Logo_small
+        Width: =148
+        X: =252
+        Y: =81
+        ZIndex: =12
+

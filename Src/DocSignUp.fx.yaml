@@ -1,0 +1,226 @@
+DocSignUp As screen:
+    BackgroundImage: =appbackgroud_1
+    Fill: =RGBA(0, 0, 0, 1)
+    ImagePosition: =ImagePosition.Tile
+    OnVisible: =NewForm(Form2) && Reset(Dropdown1_3)
+
+    Icon2_16 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(PrimaryScreen,ScreenTransition.CoverRight)
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    Form2 As form:
+        DataSource: =Table2
+        DefaultMode: =FormMode.New
+        Height: =367
+        OnSuccess: =Navigate(DocSignIn) && Notify("Account Created!", Success,2500)
+        Width: =640
+        Y: =300
+        ZIndex: =2
+
+        username_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="username"
+            Default: =ThisItem.username
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="username"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table2], DataSourceInfo.MaxLength, "username")
+            Required: =false
+            Update: =DataCardValue16.Text
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey16 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue16 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                HintText: ="New Username"
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey16.Y + DataCardKey16.Height + 5
+                ZIndex: =2
+
+            ErrorMessage3 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue16.Y + DataCardValue16.Height
+                ZIndex: =3
+
+            StarVisible3 As label:
+                Align: =Align.Center
+                Height: =DataCardKey16.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey16.Y
+                ZIndex: =4
+
+        password_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="password"
+            Default: =ThisItem.password
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="password"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table2], DataSourceInfo.MaxLength, "password")
+            Required: =false
+            Update: =DataCardValue25.Text
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey25 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue25 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                HintText: ="New Password"
+                MaxLength: =Parent.MaxLength
+                Mode: =TextMode.Password
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey25.Y + DataCardKey25.Height + 5
+                ZIndex: =2
+
+            ErrorMessage4 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue25.Y + DataCardValue25.Height
+                ZIndex: =3
+
+            StarVisible4 As label:
+                Align: =Align.Center
+                Height: =DataCardKey25.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey25.Y
+                ZIndex: =4
+
+    Button1_6 As button:
+        BorderThickness: =3
+        Fill: =RGBA(128, 128, 128, 1)
+        Height: =70
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        OnSelect: =SubmitForm(Form2)
+        Size: =24
+        Text: ="Sign Up"
+        Width: =280
+        X: =180
+        Y: =702
+        ZIndex: =3
+
+    Sign_Up_4 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =97
+        Size: =45
+        Text: ="Sign Up"
+        Width: =560
+        X: =40
+        Y: =178
+        ZIndex: =4
+
+    Dropdown1_3 As dropdown:
+        ChevronBackground: =RGBA(128, 128, 128, 1)
+        ChevronHoverBackground: =RGBA(0, 0, 0, 1)
+        Default: ="Doctor"
+        Height: =60
+        HoverFill: =RGBA(215, 223, 240, 1)
+        Items: |-
+            =Table({ Text: "User" }, { Text: "Doctor" })
+        OnChange: =Navigate(SignUp)
+        OnSelect: =
+        Reset: =true
+        SelectionFill: =RGBA(0, 0, 0, 1)
+        Size: =21
+        Width: =205
+        X: =424
+        Y: =44
+        ZIndex: =5
+
+    Image3_3 As image:
+        Height: =97
+        Image: =Logo_small
+        Width: =148
+        X: =252
+        Y: =81
+        ZIndex: =6
+

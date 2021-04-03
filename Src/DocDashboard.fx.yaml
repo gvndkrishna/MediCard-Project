@@ -1,0 +1,159 @@
+DocDashboard As screen:
+    BackgroundImage: =appbackgroud_1
+    Fill: =RGBA(0, 0, 0, 1)
+    ImagePosition: =ImagePosition.Tile
+
+    Image2_2 As image:
+        Height: =440
+        Image: =Rf61a8129a78f79c559a2483ffa746c43
+        ImagePosition: =ImagePosition.Tile
+        RadiusBottomLeft: =Image2_2.Height/4
+        RadiusBottomRight: |
+            =Image2_2.Height/4
+        Transparency: =0.1
+        Width: =262
+        X: =376
+        ZIndex: =1
+
+    BarcodeScanner2 As barcodeScanner:
+        Fill: =RGBA(218, 218, 29, 1)
+        Height: =160
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        OnScan: |-
+            =Collect(mycollection, {Info: BarcodeScanner2.Value, scannedby: username_1.Text, When: Now()})
+        RadiusBottomLeft: =11
+        RadiusBottomRight: =11
+        RadiusTopLeft: =11
+        RadiusTopRight: =11
+        Size: =24
+        Text: =""
+        X: =101
+        Y: =581
+        ZIndex: =2
+
+    Button3_7 As button:
+        Fill: =RGBA(218, 218, 29, 1)
+        Height: =160
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        RadiusBottomLeft: =11
+        RadiusBottomRight: =11
+        RadiusTopLeft: =11
+        RadiusTopRight: =11
+        Size: =24
+        Text: =""
+        X: =383
+        Y: =805
+        ZIndex: =3
+
+    Label3_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =378
+        Size: =55
+        Text: =Concatenate("Welcome ",username_1.Text)
+        VerticalAlign: =VerticalAlign.Top
+        Width: =365
+        X: =24
+        Y: =116
+        ZIndex: =4
+
+    Icon2_15 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Leave
+        OnSelect: =Navigate(PrimaryScreen,ScreenTransition.CoverRight) && Notify("You have been Logged Out",Warning,4000)
+        X: =479
+        Y: =11
+        ZIndex: =5
+
+    Icon2_18 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Camera
+        OnSelect: =Launch(BarcodeScanner2)
+        X: =149
+        Y: =629
+        ZIndex: =6
+
+    Image1_1 As image:
+        Height: =229
+        Image: ='108779078_3117297568362286_7035059729555999876_n'
+        RadiusBottomLeft: =Image1_1.Height
+        RadiusBottomRight: =Image1_1.Height
+        RadiusTopLeft: =Image1_1.Height
+        RadiusTopRight: =Image1_1.Height
+        Width: =229
+        X: =389
+        Y: =137
+        ZIndex: =7
+
+    Icon2_19 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Settings
+        OnSelect: |
+            =false
+        X: =431
+        Y: =853
+        ZIndex: =8
+
+    Image2_3 As image:
+        Height: =29
+        Image: =Rf61a8129a78f79c559a2483ffa746c43
+        ImagePosition: =ImagePosition.Tile
+        RadiusBottomRight: |+
+            =0
+            
+        RadiusTopLeft: =Image2_3.Height*15
+        RadiusTopRight: =Image2_3.Height*15
+        Transparency: =0.1
+        Width: =636
+        X: =4
+        Y: =1106
+        ZIndex: =9
+
+    Button3_4 As button:
+        Fill: =RGBA(218, 218, 29, 1)
+        Height: =160
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        OnSelect: =Navigate(DocRating) 
+        RadiusBottomLeft: =11
+        RadiusBottomRight: =11
+        RadiusTopLeft: =11
+        RadiusTopRight: =11
+        Size: =24
+        Text: =""
+        X: =101
+        Y: =805
+        ZIndex: =10
+
+    Icon2_20 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.EmojiSmile
+        OnSelect: |
+            =Navigate(DocRating) 
+        X: =149
+        Y: =853
+        ZIndex: =11
+
+    Button3_8 As button:
+        Fill: =RGBA(218, 218, 29, 1)
+        Height: =160
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        OnSelect: =Navigate(Mypatients)
+        RadiusBottomLeft: =11
+        RadiusBottomRight: =11
+        RadiusTopLeft: =11
+        RadiusTopRight: =11
+        Size: =24
+        Text: =""
+        X: =383
+        Y: =581
+        ZIndex: =12
+
+    Icon2_23 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.People
+        OnSelect: =Navigate(Mypatients)
+        X: =431
+        Y: =629
+        ZIndex: =13
+

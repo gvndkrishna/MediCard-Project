@@ -1,0 +1,51 @@
+PrimaryScreen As screen:
+    BackgroundImage: =appbackgroud
+    Fill: =RGBA(0, 0, 0, 1)
+    ImagePosition: =ImagePosition.Fill
+
+    Label2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        Height: =183
+        Size: =55
+        Text: ="Welcome!"
+        Width: =434
+        X: =98
+        Y: =267
+        ZIndex: =1
+
+    Button1_2 As button:
+        BorderThickness: =3
+        Fill: =RGBA(109, 49, 162, 1)
+        Height: =70
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        OnSelect: =Navigate(SignIn,ScreenTransition.Fade)
+        Size: =24
+        Text: ="Sign In"
+        Width: =280
+        X: =160
+        Y: =488
+        ZIndex: =2
+
+    Button1_3 As button:
+        BorderThickness: =3
+        Fill: =RGBA(109, 49, 162, 1)
+        Height: =70
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+        OnSelect: =Navigate(SignUp,ScreenTransition.Fade)
+        Size: =24
+        Text: ="Sign Up"
+        Width: =280
+        X: =160
+        Y: =619
+        ZIndex: =3
+
+    Image2 As image:
+        Height: =320
+        Image: =Logo
+        Width: =535
+        X: =47
+        Y: =37
+        ZIndex: =4
+
